@@ -9,3 +9,9 @@ Set the RabbitMQ connection string as environment variable
 ```sh
 export AMQP_URL="amqps://..."
 ```
+
+Then,
+
+```sh
+go run main.go
+```
