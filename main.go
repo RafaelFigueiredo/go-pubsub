@@ -15,7 +15,9 @@ func main() {
 	ps := pubsub.NewRabbitMQ(amqp_url)
 	err := ps.Publish("deploy", "testapp")
 	failOnError(err)
+	log.Println("message published")
 
+	log.Println("waiting response")
 	ps.Subscribe("deploy", func(msg string) error {
 		if msg == "tofail" {
 			return errors.New("test error")

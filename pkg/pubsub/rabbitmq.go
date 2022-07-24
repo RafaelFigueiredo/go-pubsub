@@ -63,7 +63,7 @@ func (mq *RabbitMQ) Publish(topic, message string) error {
 }
 
 func (mq *RabbitMQ) Subscribe(topic string, callback func(string) error) error {
-	connectionString := "amqps://gtscuqup:j9rcANXywRogZgAu8I7T7oE-3XueLvdq@jackal.rmq.cloudamqp.com/gtscuqup"
+	connectionString := mq.connectionString
 	conn, err := amqp.Dial(connectionString)
 	if err != nil {
 		log.Println("Failed to connect to RabbitMQ")
