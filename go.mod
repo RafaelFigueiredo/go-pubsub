@@ -1,4 +1,4 @@
-module github.com/rafaelfigueiredo/rabbitmq
+module github.com/rafaelfigueiredo/go-pubsub
 
 go 1.18
 

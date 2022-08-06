@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/rafaelfigueiredo/rabbitmq/pkg/pubsub"
+	"github.com/rafaelfigueiredo/go-pubsub/pkg/pubsub"
 )
 
 var amqp_url = os.Getenv("AMQP_URL")
